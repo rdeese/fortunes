@@ -1,0 +1,37 @@
+% !TEX TS-program = xelatex
+\documentclass[a4paper,9pt,oneside,landscape]{memoir}
+\usepackage{fontspec}
+\usepackage[newdimens]{labels}
+\setmainfont{Helvetica}
+\setsansfont{Monaco}
+\LabelCols=4%
+\LabelRows=10%
+\LeftPageMargin=13.0mm%
+\RightPageMargin=8.0mm%
+\TopPageMargin=16.5mm%
+\BottomPageMargin=16.5mm%
+\InterLabelColumn=1.5mm%
+\InterLabelRow=5.0mm%
+\LeftLabelBorder=6mm%
+\RightLabelBorder=6mm%
+\TopLabelBorder=7mm%
+\BottomLabelBorder=6mm%
+\LabelGridtrue%  <-- or \LabelGridfalse
+\newcommand{\phonei}{+44\textendash2323\textendash323232}
+\newcommand{\phoneii}{+44\textendash7999\textendash797979}
+\newcommand{\emaili}{carlos@dickens.org}
+
+\newcommand{\fortune}[1]{%
+  \addresslabel[\fboxsep=5mm]{%
+      {%
+        {\small\sffamily{#1}}%
+      }%
+  }
+}
+
+%
+\begin{document}
+\fortune{A fool and his money are soon parted.}
+\fortune{Look at the moon, not the finger.}
+FORTUNE-CONTENT
+\end{document}

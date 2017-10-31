@@ -14,16 +14,18 @@
 \InterLabelRow=0mm%
 \LeftLabelBorder=6mm%
 \RightLabelBorder=6mm%
-\TopLabelBorder=7mm%
-\BottomLabelBorder=6mm%
+\TopLabelBorder=6mm%
+\BottomLabelBorder=1mm%
 \LabelGridtrue%  <-- or \LabelGridfalse
-\newcommand{\fortune}[1]{%
+
+\newcommand{\fortune}[2]{%
   \addresslabel[\fboxsep=5mm]{%
-      {%
-        {\small\sffamily{#1}}%
-      }%
+    \centering\small{#1\\}%
+    \vspace{2ex}%
+    \centering\footnotesize\textbf{#2\\}%
   }
 }
+
 
 %
 \begin{document}
